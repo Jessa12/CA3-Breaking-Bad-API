@@ -9,31 +9,31 @@ export class ApiService {
     constructor(private http: HttpClient) { }
 
     getEpisodes() {
-        return this.http.get('https://8100-jessa12-ca3breakingbada-8rssvzlxz0t.ws-eu45.gitpod.io/assets/episodes.json')
+        return this.http.get('https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/episodes.json')
     }
 
     getEpisode(id) {
-        return this.http.get(`https://8100-jessa12-ca3breakingbada-8rssvzlxz0t.ws-eu45.gitpod.io/assets/episode.json`);
+        return this.http.get(`https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/episode.json`);
     }
 
     getCharacters() {
-        return this.http.get('https://8100-jessa12-ca3breakingbada-8rssvzlxz0t.ws-eu45.gitpod.io/assets/characters.json')
+        return this.http.get('https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/characters.json')
     }
 
     getCharacter(id) {
-        return this.http.get(`https://www.breakingbadapi.com/api/characters/${id}`);
+        return this.http.get(`https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/characters.json`);
     }
 
     getQuotes() {
-        return this.http.get(`https://www.breakingbadapi.com/api/quotes`)
+        return this.http.get(`https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/quotes.json`)
     }
 
     getQuote(id) {
-        return this.http.get(`https://www.breakingbadapi.com/api/quotes/${id}`);
+        return this.http.get(`https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/quotes.json`);
     }
 
     getDeaths() {
-        return this.http.get(`https://www.breakingbadapi.com/api/death-count?name=Gustavo+Fring`)
+        return this.http.get(`https://8100-jessa12-ca3breakingbada-pwpnqz17xbg.ws-eu45.gitpod.io/assets/deaths.json`)
     }
 
 }
