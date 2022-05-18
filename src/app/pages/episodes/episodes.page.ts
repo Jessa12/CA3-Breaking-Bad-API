@@ -11,6 +11,7 @@ import { ApiService } from '../../services/api.service';
 export class EpisodesPage implements OnInit {
 
   episodes: Observable<any>;
+  episodeId: Observable<any>;
 
   constructor(private router: Router, private api: ApiService) { }
 
