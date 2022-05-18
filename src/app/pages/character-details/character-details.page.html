@@ -1,32 +1,58 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start" defaultHref="tabs/character">
+    <ion-buttons slot="start" defaultHref="tabs/characters">
       <ion-back-button> </ion-back-button>
     </ion-buttons>
-    <ion-title>{{ characterDetails }}</ion-title>
-    <ion-buttons slot="end">
-    <ion-buttons (click)="unfavoritecharacter()" *ngIf="isFavorite">
-      <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>>
-    </ion-buttons>
-    <ion-button (click)="favoritecharacter()" *ngIf="!isFavorite">
-      <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
-    </ion-buttons>
+
+    <ion-title>{{ character?.name }}</ion-title>
+
   </ion-toolbar>
 </ion-header>
-<ion-content padding>
-  <ion-card *ngif="character" class="movie-card">
-    <ion-card-header>Character {{ character.name }}: {{ character.character }}</ion-card-header>
-    <ion-card-content>
-      {{ character.name }}
-    </ion-card-content>
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="character" slot="start"></ion-icon>
-      Walter White: {{ character.name }}
-    </ion-item>
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="calendar" slot="start"></ion-icon>
-      Date of Birth: {{ character.birthday }}
-    </ion-item>
-  </ion-card>
 
+<ion-content>
+  <ion-card *ngIf="character">
+        <ion-card-header>Character: {{ character.name }}</ion-card-header>
+
+        <ion-list>
+          <ion-item>
+            Character ID: {{ character.char_id }}
+          </ion-item>
+
+          <ion-item>
+            Full Name: {{ character.name }}
+          </ion-item>
+
+          <ion-item>
+            Nickname: {{ character.nickname }}
+          </ion-item>
+
+          <ion-item>
+            <ion-icon name="calendar" slot="start"></ion-icon>
+            Date of Birth: {{ character.birthday }}
+          </ion-item>
+
+          <ion-item>
+            Occupation: {{ character.occupation }}
+          </ion-item>
+
+          <ion-item>
+            Status: {{ character.status}}
+          </ion-item>
+
+          <ion-item>
+            Appearance: {{ character.appearance }}
+          </ion-item>
+
+          <ion-item>
+            Portrayed: {{ character.portrayed }}
+          </ion-item>
+
+          <ion-item>
+            <!-- <div>
+              <img src = "character.img"
+            </div> -->
+          </ion-item>
+    
+        </ion-list>
+  </ion-card>
 </ion-content>
