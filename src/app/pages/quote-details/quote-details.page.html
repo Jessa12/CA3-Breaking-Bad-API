@@ -4,7 +4,7 @@
       <ion-back-button> </ion-back-button>
     </ion-buttons>
 
-    <ion-title>{{ quote?.quote }}</ion-title>
+    <!-- <ion-title>{{ quote?.quote }}</ion-title> -->
 
   </ion-toolbar>
 </ion-header>
@@ -12,20 +12,22 @@
 <ion-content padding>
   <ion-card *ngIf="quote">
 
-        <ion-item>
-          Quote ID: {{ quote.author }}
+         <ion-item>
+           Quote ID: {{ quote.quote_id }}
+         </ion-item>
+
+         <ion-item>
+          Quote: {{ quote.quote }}
         </ion-item>
+        
+        <ion-item>
+          Author: {{ quote.author }}
+        </ion-item>
+         
+         <ion-item>
+           Series: {{ quote.series }}
+         </ion-item>
 
-          <ion-item>
-            Quote ID: {{ quote.quote_id }}
-          </ion-item>
-
-          <ion-item>
-            Quote: {{ quote.quote }}
-          </ion-item>
-
-          <ion-item>
-            Author: {{ quote.author}}
-          </ion-item>
+        
   </ion-card>
 </ion-content>
