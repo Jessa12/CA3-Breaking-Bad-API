@@ -11,18 +11,19 @@
 
 <ion-content>
   <ion-card *ngIf="character">
-        <ion-card-header>Character: {{ character.name }}</ion-card-header>
 
-        <ion-list>
           <ion-item>
+            <ion-icon name="card" slot="start"></ion-icon>
             Character ID: {{ character.char_id }}
           </ion-item>
 
           <ion-item>
+            <ion-icon name="person" slot="start"></ion-icon>
             Full Name: {{ character.name }}
           </ion-item>
 
           <ion-item>
+            <ion-icon name="person" slot="start"></ion-icon>
             Nickname: {{ character.nickname }}
           </ion-item>
 
@@ -32,14 +33,17 @@
           </ion-item>
 
           <ion-item>
+            <ion-icon name="briefcase" slot="start"></ion-icon>
             Occupation: {{ character.occupation }}
           </ion-item>
 
           <ion-item>
+            <ion-icon name="list" slot="start"></ion-icon>
             Status: {{ character.status}}
           </ion-item>
 
           <ion-item>
+            <ion-icon name="eye" slot="start"></ion-icon>
             Appearance: {{ character.appearance }}
           </ion-item>
 
@@ -52,7 +56,5 @@
               <img src = "character.img"
             </div> -->
           </ion-item>
-    
-        </ion-list>
   </ion-card>
 </ion-content>
