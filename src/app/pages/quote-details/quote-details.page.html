@@ -13,21 +13,23 @@
   <ion-card *ngIf="quote">
 
          <ion-item>
+          <ion-icon name="card" slot="start"></ion-icon>
            Quote ID: {{ quote.quote_id }}
          </ion-item>
 
          <ion-item>
+          <ion-icon name="quote icon" slot="start"></ion-icon>
           Quote: {{ quote.quote }}
         </ion-item>
         
         <ion-item>
+          <ion-icon name="person" slot="start"></ion-icon>
           Author: {{ quote.author }}
         </ion-item>
          
          <ion-item>
+          <ion-icon name="film" slot="start"></ion-icon>
            Series: {{ quote.series }}
          </ion-item>
-
-        
   </ion-card>
 </ion-content>
