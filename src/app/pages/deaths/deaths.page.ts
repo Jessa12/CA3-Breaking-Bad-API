@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -10,20 +10,20 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class DeathsPage implements OnInit {
 
-  death: Observable<any>;
+  deaths: Observable<any>;
   deathId: Observable<any>;
 
   constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {
-      this.death = this.api.getDeaths();
-      this.death.subscribe(data => {
+      this.deaths = this.api.getDeaths();
+      this.deaths.subscribe(data => {
       console.log('my deaths: ', data);
     });
   }
 
-  openDetails(character){
-      let deathId = this.deathId;
+  openDetails(death){
+      let deathId = death.death_id;
       this.router.navigateByUrl(`/tabs/deaths/${deathId}`);
   }
 }
