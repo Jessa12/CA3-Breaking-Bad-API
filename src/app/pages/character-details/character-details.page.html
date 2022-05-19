@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="success">
     <ion-buttons slot="start" defaultHref="tabs/characters">
       <ion-back-button></ion-back-button>
     </ion-buttons>
@@ -19,7 +19,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf="character">
+  <ion-card *ngIf="character" color="dark">
     <ion-card-header>Nickname: {{ character.nickname }}</ion-card-header>
 
     <ion-card-content>
@@ -27,27 +27,27 @@
     </ion-card-content>
 
           <ion-item>
-            <ion-icon name="card" slot="start"></ion-icon>
+            <ion-icon name="card" slot="start" color="success"></ion-icon>
             Character ID: {{ character.char_id }}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="calendar" slot="start"></ion-icon>
+            <ion-icon name="calendar" slot="start" color="success"></ion-icon>
             Date of Birth: {{ character.birthday }}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="briefcase" slot="start"></ion-icon>
+            <ion-icon name="briefcase" slot="start" color="success"></ion-icon>
             Occupation: {{ character.occupation }}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="list" slot="start"></ion-icon>
+            <ion-icon name="list" slot="start" color="success"></ion-icon>
             Status: {{ character.status}}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="eye" slot="start"></ion-icon>
+            <ion-icon name="eye" slot="start" color="success"></ion-icon>
             Appearance: {{ character.appearance }}
           </ion-item>
 

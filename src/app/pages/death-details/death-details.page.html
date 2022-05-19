@@ -1,16 +1,15 @@
 <ion-header>
-  <ion-toolbar color="dark">
+  <ion-toolbar color="danger">
     <ion-buttons slot="start" defaultHref="/tabs/episodes">
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title>"{{ death?.name }}"</ion-title>
+    <ion-title>Title: "{{ death?.count }}"</ion-title>
     
     <ion-buttons slot="end">
       <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="dark"></ion-icon>
       </ion-button>
-
       <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="primary"></ion-icon>
       </ion-button>
@@ -20,6 +19,7 @@
 
 <ion-content padding>
   <ion-card *ngIf="death">
+
 
     <ion-item>
       <ion-icon name="card" slot="start"></ion-icon>
