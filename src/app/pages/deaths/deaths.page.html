@@ -4,10 +4,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <ion-card *ngIf="death"></ion-card>
+    
     <ion-list>
         <ion-item button detail lines="inset" *ngFor="let death of deaths | async" (click)="openDetails(death)">
-        {{ death?.name }}
+        {{ death?.death }}
         </ion-item>
+      
     </ion-list>
 </ion-content>
