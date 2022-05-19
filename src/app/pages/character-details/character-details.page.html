@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="dark">
     <ion-buttons slot="start" defaultHref="tabs/characters">
-      <ion-back-button> </ion-back-button>
+      <ion-back-button></ion-back-button>
     </ion-buttons>
 
     <ion-title>"{{ character?.name }}"</ion-title>
@@ -10,11 +10,11 @@
       <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
         <ion-icon name="star" slot="icon-only" color="dark"></ion-icon>
       </ion-button>
+      
       <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
         <ion-icon name="star-outline" slot="icon-only" color="light"></ion-icon>
       </ion-button>
     </ion-buttons>
-
   </ion-toolbar>
 </ion-header>
 
