@@ -1,11 +1,19 @@
 <ion-header>
-  <ion-toolbar color="primary">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start" defaultHref="tabs/quotes">
       <ion-back-button> </ion-back-button>
     </ion-buttons>
 
-    <!-- <ion-title>{{ quote?.quote }}</ion-title> -->
-
+    <ion-title>Quote #: {{ quote?.quote_id }}</ion-title>
+    
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
+        <ion-icon name="star" slot="icon-only" color="dark"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
+        <ion-icon name="star-outline" slot="icon-only" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -13,13 +21,8 @@
   <ion-card *ngIf="quote">
 
          <ion-item>
-          <ion-icon name="card" slot="start"></ion-icon>
-           Quote ID: {{ quote.quote_id }}
-         </ion-item>
-
-         <ion-item>
-          <ion-icon name="quote icon" slot="start"></ion-icon>
-          Quote: {{ quote.quote }}
+          <ion-icon name="Quotation icon" slot="start"></ion-icon>
+          Quote: "{{ quote.quote }}"
         </ion-item>
         
         <ion-item>
