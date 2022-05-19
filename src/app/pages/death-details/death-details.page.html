@@ -5,15 +5,7 @@
     </ion-buttons>
 
     <ion-title>Title: "{{ death?.count }}"</ion-title>
-    
-    <ion-buttons slot="end">
-      <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
-        <ion-icon name="star" slot="icon-only" color="dark"></ion-icon>
-      </ion-button>
-      <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
-        <ion-icon name="star-outline" slot="icon-only" color="primary"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+  
   </ion-toolbar>
 </ion-header>
 

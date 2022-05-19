@@ -6,15 +6,6 @@
 
     <ion-title>"{{ character?.name }}"</ion-title>
     
-    <ion-buttons slot="end">
-      <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
-        <ion-icon name="star" slot="icon-only" color="dark"></ion-icon>
-      </ion-button>
-      
-      <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
-        <ion-icon name="star-outline" slot="icon-only" color="light"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -27,27 +18,27 @@
     </ion-card-content>
 
           <ion-item>
-            <ion-icon name="card" slot="start" color="success"></ion-icon>
+            <ion-icon name="card" slot="start" color="dark"></ion-icon>
             Character ID: {{ character.char_id }}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="calendar" slot="start" color="success"></ion-icon>
+            <ion-icon name="calendar" slot="start" color="dark"></ion-icon>
             Date of Birth: {{ character.birthday }}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="briefcase" slot="start" color="success"></ion-icon>
+            <ion-icon name="briefcase" slot="start" color="dark"></ion-icon>
             Occupation: {{ character.occupation }}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="list" slot="start" color="success"></ion-icon>
+            <ion-icon name="list" slot="start" color="dark"></ion-icon>
             Status: {{ character.status}}
           </ion-item>
 
           <ion-item>
-            <ion-icon name="eye" slot="start" color="success"></ion-icon>
+            <ion-icon name="eye" slot="start" color="dark"></ion-icon>
             Appearance: {{ character.appearance }}
           </ion-item>
 

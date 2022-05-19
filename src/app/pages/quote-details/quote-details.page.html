@@ -6,14 +6,6 @@
 
     <ion-title>Quote #: {{ quote?.quote_id }}</ion-title>
     
-    <ion-buttons slot="end">
-      <ion-button (click)="unfavoriteepisode()" *ngIf="isFavorite">
-        <ion-icon name="star" slot="icon-only" color="dark"></ion-icon>
-      </ion-button>
-      <ion-button (click)="favoriteepisode()" *ngIf="!isFavorite">
-        <ion-icon name="star-outline" slot="icon-only" color="dark"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -21,17 +13,17 @@
   <ion-card *ngIf="quote">
 
          <ion-item>
-          <ion-icon name="Quotation icon" slot="start" color="warning"></ion-icon>
+          <ion-icon name="comma" slot="start" color="dark"></ion-icon>
           Quote: "{{ quote.quote }}"
         </ion-item>
         
         <ion-item>
-          <ion-icon name="person" slot="start" color="warning"></ion-icon>
+          <ion-icon name="person" slot="start" color="dark"></ion-icon>
           Author: {{ quote.author }}
         </ion-item>
          
          <ion-item>
-          <ion-icon name="film" slot="start" color="warning"></ion-icon>
+          <ion-icon name="film" slot="start" color="dark"></ion-icon>
            Series: {{ quote.series }}
          </ion-item>
   </ion-card>
