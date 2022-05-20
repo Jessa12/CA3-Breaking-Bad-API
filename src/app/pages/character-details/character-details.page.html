@@ -1,3 +1,11 @@
+<!--Here are my references durring working with this CA
+  1. The theme for each pages
+   https://ionicframework.com/docs/theming/basics
+  2. To apply the image of each character
+   https://github.com/manoellvitor/BreakingBadApp/blob/master/BreakingBadApp/src/app/pages/episode-details/episode-details.page.html
+  3. For icons:
+  https://ionicframework.com/docs/v3/ionicons/
+  -->
 <ion-header>
   <ion-toolbar color="success">
     <ion-buttons slot="start" defaultHref="tabs/characters">
@@ -14,7 +22,7 @@
     <ion-card-header>Nickname: {{ character.nickname }}</ion-card-header>
 
     <ion-card-content>
-      <img src="{{ character.img }}" alt="{{ character.nickname }}" width="250" height="250">
+      <img src="{{ character.img }}" alt="{{ character.nickname }}" width="250" height="250"> <!-- here is the link i found to put my image of the character https://github.com/manoellvitor/BreakingBadApp/blob/master/BreakingBadApp/src/app/pages/episode-details/episode-details.page.html-->
     </ion-card-content>
 
           <ion-item>
@@ -44,12 +52,6 @@
 
           <ion-item>
             Portrayed: {{ character.portrayed }}
-          </ion-item>
-
-          <ion-item>
-            <!-- <div>
-              <img src = "character.img"
-            </div> -->
           </ion-item>
   </ion-card>
 </ion-content>
